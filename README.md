@@ -1,118 +1,88 @@
-# FastAPi-postgre
-# 🚀 FastAPI + PostgreSQL Backend
+# FastAPI + PostgreSQL Learning Project
 
-A Python backend project built with **FastAPI, PostgreSQL, and SQLAlchemy**. This project focuses on REST API development and relational database integration, providing a foundation for building scalable backend applications.
+A starter repository for learning how to connect a Python FastAPI application to PostgreSQL through SQLAlchemy.
 
-## 🛠️ Tech Stack
+## Current repository status
 
-- **Python** – Backend programming
-- **FastAPI** – REST API framework
-- **PostgreSQL** – Relational database
-- **SQLAlchemy** – Database toolkit and ORM
-- **Uvicorn** – ASGI server
+This repository is an **early-stage learning prototype**, not yet a production-ready CRUD service.
 
-## ✨ Project Highlights
+- `main.py` creates a FastAPI application and a SQLAlchemy engine.
+- `studenty.py` contains an unfinished draft of student database operations.
+- Database models, schemas, session lifecycle, authentication, migrations, automated tests, and deployment are not yet complete.
 
-- FastAPI application setup
-- PostgreSQL database connectivity
-- SQLAlchemy engine configuration
-- Relational database integration
-- Foundation for REST API development
-- Scalable backend architecture
+The README intentionally describes the current code rather than presenting planned features as already implemented.
 
-## 📁 Project Structure
+## Technology
 
-```text
-FastAPi-postgre/
-│
-├── main.py
-├── README.md
-└── .gitignore
-```
+- Python
+- FastAPI
+- SQLAlchemy
+- PostgreSQL
+- Uvicorn
+- psycopg2
 
-## ⚙️ Installation & Setup
+## Setup
 
-### 1. Clone Repository
+### 1. Clone
 
 ```bash
 git clone https://github.com/alisafdarraza737-sketch/FastAPi-postgre.git
 cd FastAPi-postgre
 ```
 
-### 2. Create Virtual Environment
+### 2. Create a virtual environment
 
-```bash
-python -m venv .venv
-```
-
-### 3. Activate Environment
-
-Windows:
+Windows PowerShell:
 
 ```powershell
-.venv\Scripts\activate
+python -m venv .venv
+.venv\Scripts\Activate.ps1
 ```
 
-### 4. Install Dependencies
+macOS / Linux:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### 3. Install the current starter dependencies
 
 ```bash
 pip install fastapi uvicorn sqlalchemy psycopg2-binary
 ```
 
-### 5. Configure PostgreSQL
+### 4. Configure PostgreSQL
 
-Create a PostgreSQL database and configure your connection string in `main.py`.
+Create a local PostgreSQL database. The current `main.py` contains a placeholder connection URL:
 
 ```python
 DATABASE_URL = "postgresql://postgres:YOUR_PASSWORD@localhost:5432/YOUR_DATABASE"
 ```
 
-Replace the placeholders with your PostgreSQL credentials.
+Replace the placeholders locally before running the database connection. Never commit real credentials. The next backend iteration should move this value into an environment variable and load it from a local `.env` file.
 
-**Security:** Never publish real database passwords on GitHub. Use environment variables for credentials.
-
-### 6. Run Application
+### 5. Run the API
 
 ```bash
 uvicorn main:app --reload
 ```
 
-## 📚 API Documentation
+API documentation:
 
-Once the server is running:
+- Swagger UI: http://127.0.0.1:8000/docs
+- ReDoc: http://127.0.0.1:8000/redoc
 
-| Documentation | URL |
-|---|---|
-| Swagger UI | http://127.0.0.1:8000/docs |
-| ReDoc | http://127.0.0.1:8000/redoc |
+## Next engineering milestones
 
-## 🎯 Learning Objectives
+1. Create a modular `app/` package with database configuration and dependency injection.
+2. Add SQLAlchemy models and Pydantic request/response schemas.
+3. Implement validated student CRUD endpoints and consistent 404/409 responses.
+4. Add password hashing, JWT authentication, and protected routes.
+5. Add Alembic migrations and environment-based configuration.
+6. Add pytest coverage using an isolated test database.
+7. Add Docker configuration and a deployment guide.
 
-- Understanding FastAPI fundamentals
-- Connecting Python applications with PostgreSQL
-- Working with SQLAlchemy
-- Understanding database engines and connections
-- Developing backend application architecture
+## Author
 
-## 🔮 Future Improvements
-
-- Implement complete CRUD operations
-- Add Pydantic request and response schemas
-- Implement database models
-- Add database session management
-- Introduce API authentication
-- Add exception handling
-- Implement database migrations
-- Add automated API testing
-
-## 👨‍💻 Developer
-
-**Ali Safdar Raza**
-
-- GitHub: https://github.com/alisafdarraza737-sketch
-- LinkedIn: https://www.linkedin.com/in/alisafdar-raza-07984b390/
-
----
-
-⭐ If you find this project useful, consider giving it a star!
-
+**Ali Safdar Raza** · [GitHub](https://github.com/alisafdarraza737-sketch) · [LinkedIn](https://www.linkedin.com/in/alisafdar-raza-07984b390/)
