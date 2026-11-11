@@ -25,39 +25,8 @@ A modern and scalable backend application built with Python, FastAPI, and Postgr
 
 🧩 Modular and scalable architecture
 
-🛠️ Tech Stack
 
-Technology
 
-Purpose
-
-Python
-
-Backend programming
-
-FastAPI
-
-REST API framework
-
-PostgreSQL
-
-Relational database
-
-SQLAlchemy
-
-ORM
-
-Pydantic
-
-Data validation
-
-Psycopg
-
-PostgreSQL driver
-
-Uvicorn
-
-ASGI server
 
 Postman
 
