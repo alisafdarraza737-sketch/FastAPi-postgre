@@ -24,10 +24,3 @@ A modern and scalable backend application built with Python, FastAPI, and Postgr
 🧪 API testing with Postman
 
 🧩 Modular and scalable architecture
-
-
-
-
-Postman
-
-API testing
